@@ -25,7 +25,7 @@ About this Image
 
 This image is based on the openjdk slim template and adds the additional required libraries to run the agent and belender renderer.
 
-Images:
+**Images:**
 * `latest` will always point to the latest image
 * `xxx.yyy.zzz` reflects the current sheep-it render agent version
 
