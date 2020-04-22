@@ -8,7 +8,8 @@ ENV SHEEPIT_PASSWORD ""
 RUN apt-get update && \
     apt-get install -y --no-install-recommends \
     curl \
-    libxxf86vm1 libgl1-mesa-glx libglu1-mesa && \
+    libxxf86vm1 libgl1-mesa-glx libglu1-mesa libfreetype6 \
+    libsdl1.2debian libxi6 libxrender1 libxfixes3 && \
     rm -rf /var/lib/apt/lists/*
 
 RUN addgroup --system sheepit \
