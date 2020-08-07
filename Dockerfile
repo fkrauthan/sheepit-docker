@@ -1,6 +1,6 @@
 FROM openjdk:8-jre-slim
 
-ENV SHEEPIT_VERSION 6.2018.0
+ENV SHEEPIT_VERSION 6.2020.0
 ENV SHEEPIT_USERNAME ""
 ENV SHEEPIT_PASSWORD ""
 # If we make the default memory limit a large number, then unless a lower number is set 'no memory limit' is applied (as 1TB is going to be larger than the maximum you'd ever want to use)
