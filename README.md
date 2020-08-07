@@ -17,7 +17,7 @@ docker run -d \
   fkrauthan/sheepit:latest
 ```
 
-To limit CPU and/or memory you can use the native Docker resource limitations.
+To limit CPU you can use the native Docker resource limitations.  For instance, to limit Sheepit to 50% of a 8-core CPU, use `--cpus=4`
 
 
 About this Image
