@@ -21,6 +21,7 @@ To limit CPU you can use the native Docker resource limitations.  For instance, 
 
 To limit memory, you can use the environment variable SHEEPIT_MEMORY_LIMIT. E.g. `-e SHEEPIT_MEMORY_LIMIT=4GB`
 
+To use GPU as a compute method set SHEEPIT_COMPUTE_METHOD. E.g. `-e set SHEEPIT_COMPUTE_METHOD=GPU`
 
 About this Image
 ----------------
