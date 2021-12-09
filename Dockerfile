@@ -24,6 +24,6 @@ RUN curl -o /sheepit-client.jar -SL "https://www.sheepit-renderfarm.com/media/ap
 USER sheepit
 # CMD java -XX:+UnlockExperimentalVMOptions -XX:+UseCGroupMemoryLimitForHeap -jar /sheepit-client.jar -ui text -login $SHEEPIT_USERNAME -password $SHEEPIT_PASSWORD -cache-dir /var/cache/sheepit -memory $SHEEPIT_MEMORY_LIMIT
 CMD if [ "$SHEEPIT_COMPUTE_METHOD" = "CPU" ]; \
-then java -XX:+UnlockExperimentalVMOptions -XX:+UseCGroupMemoryLimitForHeap -jar /sheepit-client.jar -ui text -login $SHEEPIT_USERNAME -password $SHEEPIT_PASSWORD -cache-dir /var/cache/sheepit -memory $SHEEPIT_MEMORY_LIMIT ;\
-else java -XX:+UnlockExperimentalVMOptions -XX:+UseCGroupMemoryLimitForHeap -jar /sheepit-client.jar -ui text -login $SHEEPIT_USERNAME -password $SHEEPIT_PASSWORD -gpu CUDA_0 -compute-method GPU -cache-dir /var/cache/sheepit -memory $SHEEPIT_MEMORY_LIMIT; \
+then java -jar /sheepit-client.jar -ui text -login $SHEEPIT_USERNAME -password $SHEEPIT_PASSWORD -cache-dir /var/cache/sheepit -memory $SHEEPIT_MEMORY_LIMIT ;\
+else java -jar /sheepit-client.jar -ui text -login $SHEEPIT_USERNAME -password $SHEEPIT_PASSWORD -gpu CUDA_0 -compute-method GPU -cache-dir /var/cache/sheepit -memory $SHEEPIT_MEMORY_LIMIT; \
 fi
